@@ -13,9 +13,12 @@ class CTOSImageRecognateHelperTests: XCTestCase {
 	
 	private typealias TestedType = CTOSImageRecognateHelper
 	private var testedObject: TestedType!
+	private let bundle = Bundle(for: CTOSImageRecognateHelperTests.self)
+	private let expectationTimeout: TimeInterval = 5
 
     override func setUp() {
 		self.testedObject = TestedType()
+		XCTAssertNotNil(self.testedObject)
     }
 
     override func tearDown() {
@@ -26,10 +29,24 @@ class CTOSImageRecognateHelperTests: XCTestCase {
 		XCTAssertNil(weakObject)
     }
 
-    func testImageRecognate() {
+	func testImageExample1Recognate() {
+		let verifiedTexts = ["// Called as the scene is being released by the system.", "// This occurs shortly after the scene enters the background, or when its session is discarded.", "// Release any resources associated with this scene that can be re-created the next time the scene connects.", "// The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead)."]
 
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+		let imageName = "TextExample1"
+		
+		let image = UIImage(named: imageName, in: self.bundle, compatibleWith: nil)
+		
+		XCTAssertNotNil(image)
+		guard let verifiedImage = image else { return }
+		
+		let expectation = XCTestExpectation(description: "Recognate text on image")
+		self.testedObject.recognateText(from: verifiedImage) { (recogntedTexts, error, recognitionTime) in
+			XCTAssertNil(error)
+			XCTAssertEqual(verifiedTexts, recogntedTexts)
+			expectation.fulfill()
+		}
+		// Wait until the expectation is fulfilled, with a timeout of 10 seconds.
+		self.wait(for: [expectation], timeout: self.expectationTimeout)
     }
 
     func testPerformanceExample() {

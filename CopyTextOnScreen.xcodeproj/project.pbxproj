@@ -18,6 +18,7 @@
 		7431F0FF2381F8D300D1E2A8 /* CTOSTextRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431F0FE2381F8D300D1E2A8 /* CTOSTextRecognition.swift */; };
 		7431F1032381FF3500D1E2A8 /* CTOSImageRecognateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431F1022381FF3500D1E2A8 /* CTOSImageRecognateHelper.swift */; };
 		7431F1052381FF7400D1E2A8 /* CTOSImageRecognateHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431F1042381FF7400D1E2A8 /* CTOSImageRecognateHelperTests.swift */; };
+		7431F1082382020700D1E2A8 /* TextExample1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7431F1072382020600D1E2A8 /* TextExample1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7431F0FE2381F8D300D1E2A8 /* CTOSTextRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTOSTextRecognition.swift; sourceTree = "<group>"; };
 		7431F1022381FF3500D1E2A8 /* CTOSImageRecognateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTOSImageRecognateHelper.swift; sourceTree = "<group>"; };
 		7431F1042381FF7400D1E2A8 /* CTOSImageRecognateHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTOSImageRecognateHelperTests.swift; sourceTree = "<group>"; };
+		7431F1072382020600D1E2A8 /* TextExample1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextExample1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		7431F0E22380B04200D1E2A8 /* CopyTextOnScreenTests */ = {
 			isa = PBXGroup;
 			children = (
+				7431F106238201DA00D1E2A8 /* Resources */,
 				7431F1012381FEB900D1E2A8 /* Business */,
 				7431F0E32380B04200D1E2A8 /* CopyTextOnScreenTests.swift */,
 				7431F0E52380B04200D1E2A8 /* Info.plist */,
@@ -159,6 +162,14 @@
 				7431F1042381FF7400D1E2A8 /* CTOSImageRecognateHelperTests.swift */,
 			);
 			path = Business;
+			sourceTree = "<group>";
+		};
+		7431F106238201DA00D1E2A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7431F1072382020600D1E2A8 /* TextExample1.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7431F1082382020700D1E2A8 /* TextExample1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
