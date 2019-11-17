@@ -15,6 +15,7 @@
 		7431F0D92380B04200D1E2A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7431F0D72380B04200D1E2A8 /* LaunchScreen.storyboard */; };
 		7431F0E42380B04200D1E2A8 /* CopyTextOnScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431F0E32380B04200D1E2A8 /* CopyTextOnScreenTests.swift */; };
 		7431F0EF2380B04300D1E2A8 /* CopyTextOnScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431F0EE2380B04300D1E2A8 /* CopyTextOnScreenUITests.swift */; };
+		7431F0FF2381F8D300D1E2A8 /* CTOSTextRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7431F0FE2381F8D300D1E2A8 /* CTOSTextRecognition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7431F0EA2380B04200D1E2A8 /* CopyTextOnScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopyTextOnScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7431F0EE2380B04300D1E2A8 /* CopyTextOnScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyTextOnScreenUITests.swift; sourceTree = "<group>"; };
 		7431F0F02380B04300D1E2A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7431F0FE2381F8D300D1E2A8 /* CTOSTextRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTOSTextRecognition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		7431F0CB2380B04200D1E2A8 /* CopyTextOnScreen */ = {
 			isa = PBXGroup;
 			children = (
+				7431F0FD2381F76000D1E2A8 /* Protocols */,
 				7431F0CC2380B04200D1E2A8 /* AppDelegate.swift */,
 				7431F0CE2380B04200D1E2A8 /* SceneDelegate.swift */,
 				7431F0D02380B04200D1E2A8 /* ViewController.swift */,
@@ -126,6 +129,14 @@
 				7431F0F02380B04300D1E2A8 /* Info.plist */,
 			);
 			path = CopyTextOnScreenUITests;
+			sourceTree = "<group>";
+		};
+		7431F0FD2381F76000D1E2A8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7431F0FE2381F8D300D1E2A8 /* CTOSTextRecognition.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +273,7 @@
 				7431F0D12380B04200D1E2A8 /* ViewController.swift in Sources */,
 				7431F0CD2380B04200D1E2A8 /* AppDelegate.swift in Sources */,
 				7431F0CF2380B04200D1E2A8 /* SceneDelegate.swift in Sources */,
+				7431F0FF2381F8D300D1E2A8 /* CTOSTextRecognition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
