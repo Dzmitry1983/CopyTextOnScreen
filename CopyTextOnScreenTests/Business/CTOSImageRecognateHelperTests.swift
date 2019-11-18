@@ -30,7 +30,11 @@ class CTOSImageRecognateHelperTests: XCTestCase {
     }
 
 	func testImageExample1Recognate() {
-		let verifiedTexts = ["// Called as the scene is being released by the system.", "// This occurs shortly after the scene enters the background, or when its session is discarded.", "// Release any resources associated with this scene that can be re-created the next time the scene connects.", "// The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead)."]
+		let verifiedTexts = [
+			"Test1",
+			"Test2",
+			"Text to test 3"
+		]
 
 		let imageName = "TextExample1"
 		
@@ -42,17 +46,25 @@ class CTOSImageRecognateHelperTests: XCTestCase {
 		let expectation = XCTestExpectation(description: "Recognate text on image")
 		self.testedObject.recognateText(from: verifiedImage) { (recogntedTexts, error, recognitionTime) in
 			XCTAssertNil(error)
+			XCTAssertEqual(verifiedTexts.count, recogntedTexts.count)
+			for index in 0..<min(verifiedTexts.count, recogntedTexts.count) {
+				XCTAssertEqual(verifiedTexts[index], recogntedTexts[index])
+			}
 			XCTAssertEqual(verifiedTexts, recogntedTexts)
 			expectation.fulfill()
 		}
-		// Wait until the expectation is fulfilled, with a timeout of 10 seconds.
 		self.wait(for: [expectation], timeout: self.expectationTimeout)
     }
 
     func testPerformanceExample() {
-        // This is an example of a performance test case.
+		let imageName = "TextExample1"
+		guard let verifiedImage = UIImage(named: imageName, in: self.bundle, compatibleWith: nil) else { return }
         self.measure {
-            // Put the code you want to measure the time of here.
+			let expectation = XCTestExpectation(description: "Recognate text on image")
+			self.testedObject.recognateText(from: verifiedImage) { (recogntedTexts, error, recognitionTime) in
+				expectation.fulfill()
+			}
+			self.wait(for: [expectation], timeout: 10)
         }
     }
 
